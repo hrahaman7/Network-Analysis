@@ -27,22 +27,45 @@ This is a simple example of network analysis in unsupervised learning, focusing 
 
 
 
-<!DOCTYPE html>
-<html lang="en">
+/* Base styling */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+}
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thank You Animation</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
+.thank-you-container {
+    text-align: center;
+    animation: fadeIn 3s ease forwards;
+}
 
-<body>
-    <div class="thank-you-container">
-        <h1 class="thank-you">Thank You!</h1>
-    </div>
-    <script src="script.js"></script>
-</body>
+.thank-you {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 4rem;
+    color: #ff4081;
+    text-shadow: 0 0 10px rgba(255, 64, 129, 0.5);
+    animation: thankYouShadow 3s infinite alternate;
+}
 
-</html>
+/* Animation for the thank you shadow effect */
+@keyframes thankYouShadow {
+    0% {
+        text-shadow: 0 0 20px rgba(255, 64, 129, 0.5);
+    }
+    100% {
+        text-shadow: 0 0 50px rgba(255, 64, 129, 0.5);
+    }
+}
+
+/* Animation for the fade-in effect */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
