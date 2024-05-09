@@ -24,3 +24,25 @@ Analyze Communities: Examine the detected communities by printing out each commu
 Visualize Communities: Plot the graph with nodes colored based on their community. This helps visualize the community structure in the network.
 Conclusion:
 This is a simple example of network analysis in unsupervised learning, focusing on community detection within a social network. In more complex projects, you could explore different graph data structures, algorithms, and additional metrics to analyze different types of networks.
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You Animation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="thank-you-container">
+        <h1 class="thank-you">Thank You!</h1>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
