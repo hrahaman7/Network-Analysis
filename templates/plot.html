@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Visualization</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Base styling */
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        /* Polaroid style for the graph image */
+        .polaroid {
+            width: 500px;
+            background-color: rgb(194, 43, 43);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+            margin-bottom: 25px;
+            border-radius: 10px;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        /* Image styling */
+        .polaroid img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+
+        /* Hover effect for the image */
+        .polaroid img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Text container */
+        .container {
+            padding: 10px 20px;
+            color: white;
+        }
+
+        /* Responsive design */
+        @media (max-width: 600px) {
+            .polaroid {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="polaroid">
+        <img src="{{ url_for('graph') }}" alt="Graph of source airport to destination airport">
+        <div class="container">
+            <b>Connecting Routes</b>
+        </div>
+    </div>
+</body>
+</html>

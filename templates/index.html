@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Network Analytics</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Arimo&family=Hind:wght@300&family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
+    <style>
+        /* Base styling */
+        body {
+            background-color: white;
+            font-family: 'Arimo', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        
+        h1 {
+            text-align: center;
+            color: red;
+            font-family: 'Pacifico', cursive;
+        }
+        
+        /* Form styling */
+        .container {
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        
+        input[type="file"] {
+            display: block;
+            margin-bottom: 20px;
+        }
+        
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        
+        /* Marquee styling */
+        marquee {
+            font-family: 'Open Sans Condensed', sans-serif;
+            color: #555;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        
+        /* Responsive design */
+        @media (max-width: 600px) {
+            .container {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://innodatatics.ai/assets/innologo.png" alt="Logo" width="200">
+        <h1>Network Analytics</h1>
+        <marquee>Explore the world of Network Analytics</marquee>
+        <form action="/success" method="POST" enctype="multipart/form-data">
+            <label for="file">Upload file here:</label>
+            <input type="file" id="file" name="file" />
+            <input type="submit" value="Submit" />
+        </form>
+    </div>
+
+    <!-- Add JavaScript to handle form submission and provide feedback -->
+    <script>
+        const form = document.querySelector('form');
+        form.addEventListener('submit', (event) => {
+            alert('File uploaded successfully!');
+        });
+    </script>
+</body>
+</html>

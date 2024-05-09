@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Interactive Page</title>
+    <style>
+        /* Base styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+        
+        .container {
+            text-align: center;
+            border: 2px solid red;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: white;
+        }
+        
+        #plots {
+            font-size: 20px;
+            color: #007BFF;
+            text-decoration: none;
+            margin-bottom: 20px;
+        }
+        
+        #plots:hover {
+            text-decoration: underline;
+            color: #0056b3;
+        }
+        
+        /* Responsive design */
+        @media (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
+            #plots {
+                font-size: 18px;
+            }
+        }
+    </style>
+    <script>
+        // JavaScript for interactivity
+        document.addEventListener('DOMContentLoaded', function() {
+            const link = document.querySelector('#plots');
+            link.addEventListener('click', function() {
+                alert('Redirecting to plots page...');
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <a href="/plots" id="plots">Click here for plot</a>
+    </div>
+    <p>{{ frame | safe }}</p>
+</body>
+</html>
